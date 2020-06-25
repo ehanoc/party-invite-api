@@ -14,7 +14,6 @@ Upload a list of attendees and discover who's within a certain radius to be invi
 ## Run-time
 
 ```bash
-# development
 $ make up
 ```
 
@@ -27,7 +26,17 @@ $ make tests
 # e2e tests
 $ make tests-e2e
 ```
+## Production build and run-time
 
+```bash
+$ make prod
+
+# check logs
+$ make prod-logs
+
+# kill
+$ make prod-kill
+```
 
 ## Stay in touch
 
