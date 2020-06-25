@@ -25,6 +25,13 @@ describe("AppController (e2e)", () => {
       .end(done)
   })
 
+  it("/ (POST) fails with 422 if not posting an actual doc", done => {
+    return request(app.getHttpServer())
+      .post("/attendees/available")
+      .expect(422)
+      .end(done)
+  })
+
   afterAll(async () => {
     await app.close()
   })

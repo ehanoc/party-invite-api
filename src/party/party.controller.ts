@@ -98,7 +98,7 @@ export class PartyController implements OnModuleInit {
 
   /**
    * Type guard. JS run-time doesn't do type checks by default.
-   * 
+   *
    * @param obj - object to validate as type of Attendee
    */
   private isOfAttendee(obj: any): obj is Attendee {
