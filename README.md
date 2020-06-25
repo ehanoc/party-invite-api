@@ -8,7 +8,7 @@ Upload a list of attendees and discover who's within a certain radius to be invi
 
 ## Installation
 
-``` git clone ```
+``` git clone git@github.com:ehanoc/party-invite-api.git```
 
 
 ## Run-time
