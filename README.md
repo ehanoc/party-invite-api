@@ -53,6 +53,8 @@ $ npm run test:e2e
 
 ## Production build and run-time
 
+- Stop previous run-time env's 
+
 ```bash
 # build and run
 $ make prod
