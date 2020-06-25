@@ -28,13 +28,14 @@ run-sample:
 ssh-exec:
 	docker exec -it $(CONTAINER_NAME) sh
 
+prod-kill:
+	docker kill $(IMAGE_NAME_PROD)_container
+
 prod: clean
+	- docker kill $(IMAGE_NAME_PROD)_container
 	- docker rm $(IMAGE_NAME_PROD)_container
 	docker build --tag $(IMAGE_NAME_PROD):$(VERSION) .
-	docker run --publish 3000:8080 --env OFFICE_LATITUDE=$(OFFICE_LATITUDE) --env OFFICE_LONGITUDE=$(OFFICE_LONGITUDE) --env OFFICE_INVITATION_THRESHOLD=$(OFFICE_INVITATION_THRESHOLD) --detach --name $(IMAGE_NAME_PROD)_container $(IMAGE_NAME_PROD):$(VERSION)
+	docker run --publish 3000:8080 --env OFFICE_LATITUDE=$(OFFICE_LATITUDE) --env OFFICE_LONGITUDE=$(OFFICE_LONGITUDE) --env OFFICE_INVITATION_THRESHOLD=$(OFFICE_INVITATION_THRESHOLD) --name $(IMAGE_NAME_PROD)_container $(IMAGE_NAME_PROD):$(VERSION)
 
 prod-logs:
 	docker logs -f $(IMAGE_NAME_PROD)_container
-
-prod-kill:
-	docker kill $(IMAGE_NAME_PROD)_container
