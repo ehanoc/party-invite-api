@@ -1,0 +1,31 @@
+version: '3.4'
+
+services:
+
+  party-api:
+    restart: always
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: party-api-dev
+    working_dir: /opt/app
+    command: ['npm', 'run', 'start:dev']
+    container_name: party-api
+    environment:
+        - loglevel=none
+        - OFFICE_LATITUDE=53.339428
+        - OFFICE_LONGITUDE=-6.257664
+        - OFFICE_INVITATION_THRESHOLD=100
+    volumes:
+        - .:/opt/app/
+        - /opt/app/node_modules
+    ports:
+        - "3000:8080"
+        - "9142:9200"
+    networks: 
+        - party 
+
+networks:
+  party:
+    external: false
+    driver: bridge
