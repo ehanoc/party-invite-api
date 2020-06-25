@@ -37,6 +37,20 @@ $ make tests
 # e2e tests
 $ make tests-e2e
 ```
+
+If you prefer to run these outside the container
+```bash
+# make sure that you install deps locally first
+$ npm install
+
+# unit tests
+$ npm run test
+
+# e2e tests
+$ npm run test:e2e
+```
+
+
 ## Production build and run-time
 
 ```bash
