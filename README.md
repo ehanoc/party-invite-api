@@ -12,6 +12,7 @@ Upload a list of attendees and discover who's within a certain radius to be invi
 ## Run-time
 
 ```bash
+$ cd party-invite-api
 $ make up
 ```
 
@@ -22,8 +23,9 @@ Swagger docs vailable at http://localhost:3000/docs
 * You can upload a text file with the expected format to check the available attendees
 * Sample file at _test/attendee_list_
 
-Or 
+Or open a new terminal session
 ```bash
+$ cd party-invite-api
 # run endpoint against the sample file
 $ make run-sample
 ```
