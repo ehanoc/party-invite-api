@@ -23,9 +23,8 @@ Swagger docs vailable at http://localhost:3000/docs
 * You can upload a text file with the expected format to check the available attendees
 * Sample file at _test/attendee_list_
 
-Or open a new terminal session
+Or open a new terminal session in projects root folder
 ```bash
-$ cd party-invite-api
 # run endpoint against the sample file
 $ make run-sample
 ```
