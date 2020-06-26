@@ -33,9 +33,9 @@ $ make run-sample
 
 ## Test
 
+#### While the container is running; open new terminal window
+
 ```bash
-# While the container is running
-# Open new terminal window
 $ cd party-invite-api
 
 # unit tests
