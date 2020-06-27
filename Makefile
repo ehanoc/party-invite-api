@@ -17,7 +17,7 @@ up:
 	docker-compose up
 
 tests:
-	docker exec -it $(CONTAINER_NAME) npm run test
+	docker exec -it $(CONTAINER_NAME) npm run test:cov
 
 tests-e2e:
 	docker exec -it $(CONTAINER_NAME) npm run test:e2e
