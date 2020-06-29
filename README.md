@@ -3,6 +3,15 @@
 ## Description
 Upload a list of attendees and discover who's within a certain radius to be invited
 
+### Modules
+- Party // Route that defines the API
+- GPS
+- FILES
+
+### Testing
+- unit tests in src/\*\*/*.spec.ts
+- e2e tests in test/*.e2e-spec.ts
+
 ## Installation
 
 ``` git clone git@github.com:ehanoc/party-invite-api.git```
